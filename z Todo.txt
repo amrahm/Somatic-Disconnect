@@ -1,0 +1,54 @@
+Basic movement
+	PlayerPhysics
+		Use interface or abstract class, don't just override everything
+		Make force on arms be mostly dispersed by arms
+			Make hit analyzer based on twistrot that says where hit is and what direction it came from
+		Add angular limits
+			Maybe do forwardVector dotted with the parents three vectors, and set limits based on that?
+				We can call tester function in hitRot
+		Set maximum for hitrot
+		Figure out some sort of momentum/inertia thing so arms swing around and such from spine moving around	//IMPORTANT This really completes the humany feel.
+		Rotate Man itself for hip rotations?
+		Make not do walk thing for static colliders when hips hit
+		HitRot for the hip
+		Keep over center of mass
+		HitRot fixes for thigh/shin combo
+		Slippin and slidin on high angle surfaces
+	Walking
+		Make this not happen: https://gfycat.com/CourteousRegalGreathornedowl
+	Gun holding
+		parent switching for aiming
+		Smoothdamp between aim and not aim for gunarm.
+		Gun weight fixes
+		Hold up gun if pressed against wall.
+		Hold over barrier if can see over it.
+	Be on top of bumpy truck
+	Crouch fixes
+		Add different anim for when in air?
+		allow running while crouched
+	Add force down when jumping?
+	Maybe get rid of crouch before jump? Maybe only when stationary?
+	Crouch then uncrouch when pickup guns, hold to extract ammo
+	Leaning with Q and E
+	More animations
+		Blend tree walk-turning animations from regular walking animations
+	Trigger to fix when fallen through the level
+
+Advanced Movement
+	Parkour
+		Look into pressing oneself against wall when pushing forward at wall
+	Sliding/diving
+	Unarmed Combat
+	Wings
+	Actual jetpack
+	Grapple hook
+
+Refinement
+
+Npcs
+	Do a thing where when you're real up close near an enemy, you bring the gun back to keep it pointed at their head.
+
+Game
+
+Minigames:
+	Multiplayer stealth game (like Low Light Combat)

@@ -1,0 +1,35 @@
+Suit detect laser pointer
+Ricochet Gun - This gun does some futuristic bullshit to make bullets _unbelievably_ bouncy! Don't worry about the science, worry about shooting yourself!
+If openworld doesn't work out, city spheres instead
+FTL as late game development. Early game makes clear how limited STL travel is.
+Ammo teleporter that teleports ammo from stockpile - make ammo a problem for early game and an expense for late game
+	Stockpiles can be destroyed
+	Teleporters for other things  (vehicles, maybe troops?) that are bigger than thing teleported and are easily destroyed
+Drones, flying/rolling with weapons and such
+Trippy/cool death sequence
+	Dream mixed with tech representation of being uploaded conscious when starting (for tutorial) and when dying without enough money
+		This will allow hacking that isn't super boring. Could still be puzzle type stuff, but with action, or parkour challenge type stuff. I dunno, be creative you fuck.
+Lowest difficulty choice - "Your Mom"
+Auto-adjust difficulty setting. Look into concept of "flow" in creative/leisure activities.
+Wizard Mode
+Throwing guns sorta like Hotline Miami/Duck Game
+Can melee guns out of other peoples hands
+Projected copy of yourself, for ambush/distraction
+
+Online Ideas:
+	Short RTS-like matches
+	Persistent crew, vehicles, upgrades, etc., but these can all be killed/destroyed or limited for specific matches (based on the scenario)
+	#YOLOmode:
+		Like realistic mode (no re-spawning), but you only get a single try, which permanently ties a special additional rank/badge type thing to your account
+		Has to be unlocked by reaching a certain online rank, playing online for a certain amt of time, and doing well enough in realistic mode
+
+Name Ideas:
+	First World Anarchy
+	That Good Night
+	The Whe
+	A Thousand Deaths
+	Pokemon: Fire Emblem
+	Dreams of a Forgotten Tomorrow
+	Quantum Age
+	Somatic Disconnect	<------ (disconnecting body from mind)
+	[Something], [Somethingelse], and [Anotherthing]	<------ (makes it hard to put in lists)
