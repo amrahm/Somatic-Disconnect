@@ -16,6 +16,7 @@ Basic movement
 		Slippin and slidin on high angle surfaces
 	Walking
 		Make this not happen: https://gfycat.com/CourteousRegalGreathornedowl
+			Use wheelcollider for movement?
 	Gun holding
 		parent switching for aiming
 		Smoothdamp between aim and not aim for gunarm.
