@@ -1,3 +1,7 @@
+Don't use real torque. Use getOctant type math to determine how much should be push rotation and how much twist
+
+
+/// <summary> Add some docs to methods and fields and classes and such </summary>
 Basic movement
 	PlayerPhysics
 		Use interface or abstract class, don't just override everything

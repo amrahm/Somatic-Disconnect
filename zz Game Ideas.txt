@@ -1,4 +1,5 @@
-Suit detect laser pointer
+Suit ability to detect laser pointer
+Nonvisible-light lasers and flashlights only visible with special glasses
 Ricochet Gun - This gun does some futuristic bullshit to make bullets _unbelievably_ bouncy! Don't worry about the science, worry about shooting yourself!
 If openworld doesn't work out, city spheres instead
 FTL as late game development. Early game makes clear how limited STL travel is.
@@ -7,21 +8,24 @@ Ammo teleporter that teleports ammo from stockpile - make ammo a problem for ear
 	Teleporters for other things  (vehicles, maybe troops?) that are bigger than thing teleported and are easily destroyed
 Drones, flying/rolling with weapons and such
 Trippy/cool death sequence
-	Dream mixed with tech representation of being uploaded conscious when starting (for tutorial) and when dying without enough money
+	Dream mixed with tech representation of being uploaded conscious when starting (for tutorial) and when dying without enough money/backup bodies
+		When you die w/o enough money/backups, you have to hack some systems The Matrix or Inception style to get money/a new body printed.
 		This will allow hacking that isn't super boring. Could still be puzzle type stuff, but with action, or parkour challenge type stuff. I dunno, be creative you fuck.
-Lowest difficulty choice - "Your Mom"
+Lowest difficulty choice – "Your Mom"
 Auto-adjust difficulty setting. Look into concept of "flow" in creative/leisure activities.
-Wizard Mode
-Throwing guns sorta like Hotline Miami/Duck Game
+Wizard Mode, or just randomly having some magic in the game
+Throwing guns sorta like Hotline Miami/Duck Game/SUPER HOT
 Can melee guns out of other peoples hands
-Projected copy of yourself, for ambush/distraction
+Projected copy of yourself, for ambush/distraction.
 
 Online Ideas:
 	Short RTS-like matches
-	Persistent crew, vehicles, upgrades, etc., but these can all be killed/destroyed or limited for specific matches (based on the scenario)
+	Persistent crew, vehicles, upgrades, etc., but these can all be killed/destroyed permanently or limited for specific matches (based on the scenario)
 	#YOLOmode:
-		Like realistic mode (no re-spawning), but you only get a single try, which permanently ties a special additional rank/badge type thing to your account
-		Has to be unlocked by reaching a certain online rank, playing online for a certain amt of time, and doing well enough in realistic mode
+		Like realistic mode (single player, no re-spawning), but you only get a single try, which permanently ties a special additional rank/badge type thing to your account
+		Has to be unlocked by reaching a certain online rank, playing online for a certain amount of time, having a single online
+			game where you reach some difficult to achieve score, and doing well enough in realistic mode
+		Have this there, but don't explain it beyond "You only live once." It will be hidden entirely until meeting the requirements
 
 Name Ideas:
 	First World Anarchy
@@ -32,4 +36,6 @@ Name Ideas:
 	Dreams of a Forgotten Tomorrow
 	Quantum Age
 	Somatic Disconnect	<------ (disconnecting body from mind)
+	Somatic Disconnect but like, in Latin
 	[Something], [Somethingelse], and [Anotherthing]	<------ (makes it hard to put in lists)
+	BABA	<------ (but it don't stand for nothing) (also could be name of protag?)
