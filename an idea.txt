@@ -1,0 +1,13 @@
+If frontBack and leftRight are high, it is a twist
+If only one is high, it is a push, and direction of push is based on which one
+If both are low, it is a push inwards
+
+upDown affects how much of the force is applied to this object vs its parent
+
+
+have stuff in abstract class figure this out and then give the concrete classes a few numbers, which they will use to figure out how to move
+
+
+
+For animations, this is kind of dumb, but maybe in lateUpdate I can capture what the change in angle was (+= in case there are mulptiple lateUpdates before a fixedUpdate), then always undo it, and then in fixedUpdate I can actually apply the rotation but undo it if it causes a collision (check about penetration depth). This is where all rotations, including the ones from hitRot, would be applied.
+How can we make it also allow pushback? Like make certain actions (e.g. uncrouching or doing a pull-up) will actually move the body the inverse of the penetration and allow the motion. Maybe do that by default for up/down with legs, and then make it so that it can be enabled/disabled for arms.
