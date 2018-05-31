@@ -1,4 +1,7 @@
-Don't use real torque. Use getOctant type math to determine how much should be push rotation and how much twist
+Figure out how to do bounds so that numbers can auto be from -1 to 1
+Figure out what info each concrete class needs to figure out how to move and what to transfer to parent
+	Decide if rotation stuff and/or parent transfer stuff can also be moved to abstract class
+Implement the getOctant stuff to get this information
 
 
 /// <summary> Add some docs to methods and fields and classes and such </summary>

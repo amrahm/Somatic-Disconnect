@@ -1,3 +1,5 @@
+Don't use real torque (cause that's not how torque works). Use getOctant type math to determine how much should be push rotation and how much twist
+
 If frontBack and leftRight are high, it is a twist
 If only one is high, it is a push, and direction of push is based on which one
 If both are low, it is a push inwards

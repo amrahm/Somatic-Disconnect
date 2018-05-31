@@ -41,6 +41,8 @@ public class PlayerAnimation : MonoBehaviour {
 		float hIn;
 		float mX;
 		if(capsuleS.player){
+//			vIn = Input.GetAxis("Vertical");
+//			hIn = Input.GetAxis("Horizontal");
 			vIn = capsuleS.velForward / 2 + playerPhysics.stepBack * 10;
 			hIn = capsuleS.velRight / 2 + playerPhysics.stepLeft * 10;
 			mX = Input.GetAxis("Mouse X");
