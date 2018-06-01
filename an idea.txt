@@ -1,4 +1,4 @@
-Don't use real torque (cause that's not how torque works). Use getOctant type math to determine how much should be push rotation and how much twist
+Don't use "real" torque (cause that's not how impacts work). Use getOctant type math to determine how much should be push rotation and how much twist
 
 If frontBack and leftRight are high, it is a twist
 If only one is high, it is a push, and direction of push is based on which one
@@ -6,10 +6,15 @@ If both are low, it is a push inwards
 
 upDown affects how much of the force is applied to this object vs its parent
 
+^This is for component of force normal to surface hit.
+For the two tangent components, treat them like additional hits from the side opposite the component
+	so for the tangent leftRight component, it would be another hit with all the same octant stuff but leftRight would be 1 or -1.
+
 
 have stuff in abstract class figure this out and then give the concrete classes a few numbers, which they will use to figure out how to move
 
 
 
-For animations, this is kind of dumb, but maybe in lateUpdate I can capture what the change in angle was (+= in case there are mulptiple lateUpdates before a fixedUpdate), then always undo it, and then in fixedUpdate I can actually apply the rotation but undo it if it causes a collision (check about penetration depth). This is where all rotations, including the ones from hitRot, would be applied.
+For animations, this is kind of dumb, but maybe in LateUpdate I can capture what the change in angle was (+= in case there are multiple LateUpdates before a FixedUpdate, or maybe look into AnimatorUpdateMode.AnimatePhysics), then always undo it, and then in FixedUpdate I can actually apply the rotation but undo it if it causes a collision (check about penetration depth (Physics.ComputePenetration)). This is where all rotations, including the ones from hitRot, would be applied.
 How can we make it also allow pushback? Like make certain actions (e.g. uncrouching or doing a pull-up) will actually move the body the inverse of the penetration and allow the motion. Maybe do that by default for up/down with legs, and then make it so that it can be enabled/disabled for arms.
+Or maybe we make the amount of penetration undo based on the strength of the action, which by default will be small, and then we just teach the character to avoid bumping stuff. We'll have at least a few triggers for parkour stuff already, so.
