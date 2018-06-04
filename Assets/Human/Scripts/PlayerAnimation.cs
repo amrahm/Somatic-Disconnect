@@ -108,7 +108,8 @@ public class PlayerAnimation : MonoBehaviour {
 		anims.SetLayerWeight(4, playerPhysics.crouchAmount*.5f + capsuleS.crouchAmount*.4f);
 		anims.SetFloat(crouchAmountFloat, playerPhysics.crouchAmount + capsuleS.crouchAmount*5);
 	}
-	void OnAnimatorIK(){ //a callback for calculating IK
+
+    private void OnAnimatorIK(int layerIndex){ //a callback for calculating IK
 		if(anims){
 			if(ikActive){ //if the IK is active, set the position and rotation directly to the goal.
 				if(lookObj != null) { // Set the look target position, if one has been assigned

@@ -22,9 +22,8 @@ public class Look : MonoBehaviour {
 	public float turnedY, turnedY2, turnedX, turnedX2, turnedXSpine, turnedXSpine2;
 	public bool X, Y;
 	#endregion
-	void Awake(){
-	}
-	void Update(){
+
+    private void Update(){
 		if(capsuleS.player)
 			smoothX = aimSensitivity * sensitivity * Input.GetAxis("Mouse X") * 15f;
 		if(X){
@@ -57,11 +56,12 @@ public class Look : MonoBehaviour {
 		//Aim
 //		GetComponent<Camera>().fieldOfView = Mathf.SmoothDamp(GetComponent<Camera>().fieldOfView, currentTargetCameraAngle, ref ratioZoomV, capsuleS.currentGun.GetComponent<Gun>().zoomSpeed);
 //		aimPos.transform.Rotate(-smoothX * transform.up * 50, Space.World);
-		aimPosPre.transform.localEulerAngles = new Vector3(-7.2f, aimPosPre.transform.localRotation.eulerAngles.y + (Mathf.DeltaAngle(turnedX2, turnedX) + Mathf.DeltaAngle(turnedXSpine2,turnedXSpine)) / 4, -94.4f);
+//		aimPosPre.transform.localEulerAngles = new Vector3(aimPosPre.transform.localRotation.eulerAngles.x + (Mathf.DeltaAngle(turnedX2, turnedX) + Mathf.DeltaAngle(turnedXSpine2,turnedXSpine)) / 4, 0, 0);
 	}
-	void LateUpdate (){
+
+    private void LateUpdate (){
 		aimPos.transform.localPosition -= new Vector3(0, smoothX / 250, 0);
-		spine.transform.Rotate(transform.up * turnedXSpine, Space.World);
-		head.transform.localEulerAngles = new Vector3(0, turnedY/1.5f - capsuleS.crouchAmount*15, 0);
+		spine.transform.Rotate(Vector3.up * turnedXSpine, Space.World);
+		head.transform.localEulerAngles = new Vector3(turnedY/1.5f - capsuleS.crouchAmount*15, 0, 0);
 	}
 }
