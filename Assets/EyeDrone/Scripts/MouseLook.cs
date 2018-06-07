@@ -1,6 +1,6 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using ExtensionMethods;
+using UnityEngine;
 
 public class MouseLook : MonoBehaviour {
 	#region Variables
@@ -37,32 +37,32 @@ public class MouseLook : MonoBehaviour {
 	public float t = 2;
 	public float shotSize = 0.2957171f;
 	public bool isControlled;
-	bool blind;
+    private bool blind;
 	[HideInInspector]
 	public float vertInput, horizInput, turnInput;
 //	[HideInInspector]
 	public float cannonAngle;
-	bool moving;
-	float mouseSensitivity;
+    private bool moving;
+    private float mouseSensitivity;
 	public float push;
-	bool shouldShoot;
+    private bool shouldShoot;
 	public float pGain = 2600; // the proportional gain
 	public float iGain = 40; // the integral gain
 	public float dGain = 260; // differential gain
-	float integrator = 19.6f; // error accumulator
-	float lastError;
-	float curPos = 2; // actual Pos
-	float force = 785; // current force
-	Rigidbody rb;
-	float sprintVol1;
-	float sprint = 1f;
-	float velForward, velRight;
-	Vector3 fwdVec, rightVec;
-	Vector3 tangentVec, tangentRightVec;
-	Coroutine aim;
+    private float integrator = 19.6f; // error accumulator
+    private float lastError;
+    private float curPos = 2; // actual Pos
+    private float force = 785; // current force
+    private Rigidbody rb;
+    private float sprintVol1;
+    private float sprint = 1f;
+    private float velForward, velRight;
+    private Vector3 fwdVec, rightVec;
+    private Vector3 tangentVec, tangentRightVec;
+    private Coroutine aim;
 	#endregion
 
-	IEnumerator Aim(){
+    private IEnumerator Aim(){
 		Ray ray = new Ray(laser.transform.position, laser.transform.forward);
 		RaycastHit hit;
 		float angle = 0;
@@ -75,15 +75,15 @@ public class MouseLook : MonoBehaviour {
 			cannonAngle = Extensions.SharpInDamp(cannonAngle, angle, aimSpeed);
 			yield return new WaitForFixedUpdate();
 		}
-		yield break;
 	}
 
-	void Awake(){
+    private void Awake(){
 		mouseSensitivity = mainCamera.GetComponent<Look>().sensitivity;
 		push = (maxPush - minPush) / 2;
 		rb = GetComponent<Rigidbody>();
 	}
-	void Walk(){
+
+    private void Walk(){
 		velForward = Vector3.Dot(rb.velocity, transform.forward); //Current fwd speed. Used to see if Kick is necessary.
 		velRight = Vector3.Dot(rb.velocity, transform.right);//Similar to ^
 
@@ -127,7 +127,8 @@ public class MouseLook : MonoBehaviour {
 			//Debug.Log("kickl"); //\\\\\\\\\\\\\\\\\\\\\\\\\\
 		}
 	}
-	void Sprint(float sprintAxis, bool horizontalPressed){
+
+    private void Sprint(float sprintAxis, bool horizontalPressed){
 		if(sprintAxis > 0){
 			if(vertInput > 0 && sprint <= sprintSpeed && rb.velocity.magnitude > 1 && !horizontalPressed){
 				sprint = Mathf.SmoothDamp(sprint, sprintSpeed, ref sprintVol1, timeToFullSprint);
@@ -145,7 +146,7 @@ public class MouseLook : MonoBehaviour {
 		}
 	}
 
-	void Update(){
+    private void Update(){
 		eye.gameObject.transform.LookAt(target.transform);
 		if(Input.GetKeyDown("o")){
 			gravity = !gravity;
@@ -153,7 +154,7 @@ public class MouseLook : MonoBehaviour {
 		if(Input.GetKeyDown("p") || shouldShoot){
 			shouldShoot = false;
 			if(gravity){	
-				MouseLookTestHelper shot = Object.Instantiate(script, cannon.transform.position, gameObject.transform.rotation);
+				MouseLookTestHelper shot = Instantiate(script, cannon.transform.position, gameObject.transform.rotation);
 				shot.transform.localScale = new Vector3(0.001f, 0.001f, 0.001f);
 				shot.script = GetComponent<MouseLook>();
 				shot.guy = target;
@@ -169,7 +170,7 @@ public class MouseLook : MonoBehaviour {
 //				if(aim != null) StopCoroutine(aim);
 //				aim = StartCoroutine(Aim());
 			} else{
-				MouseLookTestHelper shot2 = Object.Instantiate(script2, cannon.transform.position, gameObject.transform.rotation);
+				MouseLookTestHelper shot2 = Instantiate(script2, cannon.transform.position, gameObject.transform.rotation);
 				shot2.transform.localScale = new Vector3(0.001f, 0.001f, 0.001f);
 				shot2.script = GetComponent<MouseLook>();
 				shot2.barrelT = barrel.transform;
@@ -188,7 +189,6 @@ public class MouseLook : MonoBehaviour {
 			mainCamera.GetComponent<Camera>().enabled = !mainCamera.GetComponent<Camera>().enabled;
 			mainCamera.GetComponent<AudioListener>().enabled = !mainCamera.GetComponent<AudioListener>().enabled;
 			mainCamera.GetComponent<FlareLayer>().enabled = !mainCamera.GetComponent<FlareLayer>().enabled;
-			mainCamera.GetComponent<GUILayer>().enabled = !mainCamera.GetComponent<GUILayer>().enabled;
 			thisCamera.SetActive(!thisCamera.activeSelf);
 			player.GetComponent<CapsuleScript>().player = !player.GetComponent<CapsuleScript>().player;
 			isControlled = !isControlled;
@@ -240,7 +240,8 @@ public class MouseLook : MonoBehaviour {
 			}
 		}
 	}
-	void FixedUpdate(){
+
+    private void FixedUpdate(){
 		Quaternion jBR = Quaternion.FromToRotation(-transform.up, Vector3.down);
 		float downDot = Vector3.Dot(transform.up, Vector3.down);
 		float rightDot = Vector3.Dot(transform.right, Vector3.down);
@@ -284,7 +285,8 @@ public class MouseLook : MonoBehaviour {
 		if(glidey) rb.AddRelativeForce(horizInput * glideySpeed, 0f, vertInput * glideySpeed, ForceMode.Acceleration);
 		rb.AddRelativeTorque(0f, turnInput * turnSpeed * mouseSensitivity, 0f, ForceMode.Acceleration);
 	}
-	void LateUpdate(){
+
+    private void LateUpdate(){
 		if(isControlled){
 			jetBall.transform.Rotate(transform.right * vertInput * 6, Space.World);
 			jetBall.transform.Rotate(transform.forward * -horizInput * 6, Space.World);

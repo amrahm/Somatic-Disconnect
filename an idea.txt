@@ -5,6 +5,7 @@ If only one is high, it is a push, and direction of push is based on which one
 If both are low, it is a push inwards
 
 upDown affects how much of the force is applied to this object vs its parent
+	a push inwards will have a high upDown and low others, and this should also transfer to parent
 
 ^This is for component of force normal to surface hit.
 For the two tangent components, treat them like additional hits from the side opposite the component

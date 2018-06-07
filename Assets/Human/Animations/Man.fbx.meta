@@ -220,11 +220,16 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Crouch' has import animation warnings that might
+      lower retargeting quality:\n\t'shin.L' has scale animation that will be discarded.\n\t'shin.R'
+      has scale animation that will be discarded.\n\nClip 'Armature|Crouch' has import
+      animation warnings that might lower retargeting quality:\n\t'shin.L' has scale
+      animation that will be discarded.\n\t'shin.R' has scale animation that will
+      be discarded.\n"
     animationRetargetingWarnings: 
-    animationDoRetargetingWarnings: 1
-    importAnimatedCustomProperties: 0
-    importConstraints: 1
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 1
+    importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -237,18 +242,18 @@ ModelImporter:
     - serializedVersion: 16
       name: Crouch
       takeName: Crouch
-      firstFrame: 0
-      lastFrame: 24
+      firstFrame: 10
+      lastFrame: 11
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
-      hasAdditiveReferencePose: 0
+      hasAdditiveReferencePose: 1
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 0
@@ -258,8 +263,190 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/elbow.IK.L
+        weight: 0
+      - path: Armature/elbow.IK.L/elbow.IK.L_end
+        weight: 0
+      - path: Armature/elbow.IK.R
+        weight: 0
+      - path: Armature/elbow.IK.R/elbow.IK.R_end
+        weight: 0
+      - path: Armature/hand.IK.L
+        weight: 0
+      - path: Armature/hand.IK.L/hand.IK.L_end
+        weight: 0
+      - path: Armature/hand.IK.R
+        weight: 0
+      - path: Armature/hand.IK.R/hand.IK.R_end
+        weight: 0
+      - path: Armature/player_controller
+        weight: 1
+      - path: Armature/player_controller/foot.controller.L
+        weight: 0
+      - path: Armature/player_controller/foot.controller.L/foot.IK.L
+        weight: 0
+      - path: Armature/player_controller/foot.controller.L/foot.IK.L/foot.IK.L_end
+        weight: 0
+      - path: Armature/player_controller/foot.controller.R
+        weight: 0
+      - path: Armature/player_controller/foot.controller.R/foot.IK.R
+        weight: 0
+      - path: Armature/player_controller/foot.controller.R/foot.IK.R/foot.IK.R_end
+        weight: 0
+      - path: Armature/player_controller/hips.IK
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/neck
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/neck/head
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/neck/head/head_end
+        weight: 0
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/finger_index.01.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/finger_index.01.L/finger_index.02.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/finger_index.01.L/finger_index.02.L/finger_index.03.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/finger_index.01.L/finger_index.02.L/finger_index.03.L/finger_index.03.L_end
+        weight: 0
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/finger_middle.01.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/finger_middle.01.L/finger_middle.02.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/finger_middle.01.L/finger_middle.02.L/finger_middle.03.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/finger_middle.01.L/finger_middle.02.L/finger_middle.03.L/finger_middle.03.L_end
+        weight: 0
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/finger_pinky.01.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/finger_pinky.01.L/finger_pinky.02.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/finger_pinky.01.L/finger_pinky.02.L/finger_pinky.03.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/finger_pinky.01.L/finger_pinky.02.L/finger_pinky.03.L/finger_pinky.03.L_end
+        weight: 0
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/finger_ring.01.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/finger_ring.01.L/finger_ring.02.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/finger_ring.01.L/finger_ring.02.L/finger_ring.03.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/finger_ring.01.L/finger_ring.02.L/finger_ring.03.L/finger_ring.03.L_end
+        weight: 0
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/thumb.01.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/thumb.01.L/thumb.02.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/thumb.01.L/thumb.02.L/thumb.03.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.L/upper_arm.L/forearm.L/hand.L/thumb.01.L/thumb.02.L/thumb.03.L/thumb.03.L_end
+        weight: 0
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/finger_index.01.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/finger_index.01.R/finger_index.02.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/finger_index.01.R/finger_index.02.R/finger_index.03.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/finger_index.01.R/finger_index.02.R/finger_index.03.R/finger_index.03.R_end
+        weight: 0
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/finger_middle.01.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/finger_middle.01.R/finger_middle.02.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/finger_middle.01.R/finger_middle.02.R/finger_middle.03.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/finger_middle.01.R/finger_middle.02.R/finger_middle.03.R/finger_middle.03.R_end
+        weight: 0
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/finger_pinky.01.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/finger_pinky.01.R/finger_pinky.02.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/finger_pinky.01.R/finger_pinky.02.R/finger_pinky.03.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/finger_pinky.01.R/finger_pinky.02.R/finger_pinky.03.R/finger_pinky.03.R_end
+        weight: 0
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/finger_ring.01.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/finger_ring.01.R/finger_ring.02.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/finger_ring.01.R/finger_ring.02.R/finger_ring.03.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/finger_ring.01.R/finger_ring.02.R/finger_ring.03.R/finger_ring.03.R_end
+        weight: 0
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/thumb.01.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/thumb.01.R/thumb.02.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/thumb.01.R/thumb.02.R/thumb.03.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/spine/ribs/shoulder.R/upper_arm.R/forearm.R/hand.R/thumb.01.R/thumb.02.R/thumb.03.R/thumb.03.R_end
+        weight: 0
+      - path: Armature/player_controller/hips.IK/hips/thigh.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/thigh.L/shin.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/thigh.L/shin.L/foot.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/thigh.L/shin.L/foot.L/toe.L
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/thigh.L/shin.L/foot.L/toe.L/toe.L_end
+        weight: 0
+      - path: Armature/player_controller/hips.IK/hips/thigh.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/thigh.R/shin.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/thigh.R/shin.R/foot.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/thigh.R/shin.R/foot.R/toe.R
+        weight: 1
+      - path: Armature/player_controller/hips.IK/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
+        weight: 0
+      - path: Armature/player_controller/knee.IK.L
+        weight: 0
+      - path: Armature/player_controller/knee.IK.L/knee.IK.L_end
+        weight: 0
+      - path: Armature/player_controller/knee.IK.R
+        weight: 0
+      - path: Armature/player_controller/knee.IK.R/knee.IK.R_end
+        weight: 0
+      - path: Armature/player_controller/ribs.IK
+        weight: 0
+      - path: Armature/player_controller/ribs.IK/ribs.IK_end
+        weight: 0
+      - path: Longe Clothe
+        weight: 0
+      - path: Man
+        weight: 0
+      - path: Man for Longe
+        weight: 0
+      maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
@@ -1224,7 +1411,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
-    hasTranslationDoF: 0
+    hasTranslationDoF: 1
     hasExtraRoot: 1
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
